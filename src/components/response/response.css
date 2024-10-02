@@ -1,0 +1,33 @@
+.response__content {
+    height: 100%;
+    background-color: var(--light-grey);
+    text-align: justify;
+    padding: 10px 20px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    box-shadow: var(--shadow);
+    border: 2px dotted var(--darker-grey);
+}
+
+.response__content span {
+    font-style: italic;
+}
+
+.response__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: 20px;
+    height: 100%;
+}
+
+.response__logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.response__logo img {
+    width: 40px;
+    height: 40px;
+}

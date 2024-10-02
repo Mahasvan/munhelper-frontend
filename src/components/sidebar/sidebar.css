@@ -1,0 +1,20 @@
+.sidebar_container {
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--almost-white);
+
+}
+
+.sidebar_container span {
+    padding: 10px;
+    /* border: 1px solid black; */
+    font-size: 1.5rem;
+    font-weight: 700;
+}

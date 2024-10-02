@@ -1,0 +1,9 @@
+.main_container {
+    background-color: var(--almost-white);
+    text-align: center;
+    min-height: 50vh;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}

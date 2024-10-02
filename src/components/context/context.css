@@ -1,0 +1,37 @@
+.context__element-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.context__container {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.context__container p {
+    padding: 10px;
+    font-style: italic;
+}
+
+.context__element {
+    padding: 10px;
+}
+.context__element-collapsible {
+    background-color: var(--light-grey);
+    display: block;
+    width: 100%;
+
+    color: #444;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 15px;
+    border: 2px dotted var(--light-blue)
+  }
+
+.context__element-collapsible:hover {
+    background-color: var(--darker-grey);
+}
