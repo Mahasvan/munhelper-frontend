@@ -5,6 +5,7 @@ This repository contains the Frontend code for [MunHelper](https://github.com/ma
 ## Build Instructions
 
 - To build MUNHelper, follow the instructions in [this repo](https://github.com/mahasvan/munhelper).
+- Configure backend access parameters in `src/assets/schema.json`
 - Once configured, run the below command to build the frontend.
 
 ```shell
