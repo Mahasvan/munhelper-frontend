@@ -6,7 +6,7 @@ import Context from '../context/Context'
 const Sidebar = () => {
   return (
     <div className='sidebar_container'>
-        <span>Context</span>
+        <span>Related Documents</span>
         <Context />
     </div>
   )

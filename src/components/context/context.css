@@ -18,11 +18,33 @@
 .context__element {
     padding: 10px;
 }
+
+.context__element-content {
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px dotted var(--light-blue);
+    box-shadow: var(--shadow);
+
+}
+
+.context__element-content-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.context__element-content-text {
+    font-size: 1rem;
+}
+
 .context__element-collapsible {
     background-color: var(--light-grey);
     display: block;
     width: 100%;
-
+    box-shadow: var(--shadow);
     color: #444;
     padding: 20px;
     border: none;
@@ -34,4 +56,6 @@
 
 .context__element-collapsible:hover {
     background-color: var(--darker-grey);
+    border: 2px dotted var(--light-grey);
+
 }
