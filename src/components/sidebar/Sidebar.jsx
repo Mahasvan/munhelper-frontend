@@ -1,7 +1,7 @@
 import React from 'react'
 
 import "./sidebar.css"
-import Context from '../context/Context'
+import {Context} from '../context/Context'
 
 const Sidebar = () => {
   return (
