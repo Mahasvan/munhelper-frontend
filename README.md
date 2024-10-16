@@ -20,5 +20,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ```shell
 npm install -g serve
-serve -s build
+serve -s build -l 3000
 ```
+Change `3000` to the port you wish for it to listen at.
