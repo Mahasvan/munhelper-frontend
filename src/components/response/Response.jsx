@@ -7,15 +7,15 @@ import "./response.css"
 const Response = () => {
   return (
     <div className='response__container'>
-        <div className='response__logo'>
-            <img src={Logo} alt='logo'></img>
-        </div>  
-        <div id="response__content" className='response__content'>
-            <span>Enter a query...</span>
-        </div>
+      <div className='response__logo'>
+        <img src={Logo} alt='logo'></img>
+      </div>
+      <div id="response__content" className='response__content'>
+        <span>Enter a query...</span>
+      </div>
 
     </div>
-    
+
   )
 }
 

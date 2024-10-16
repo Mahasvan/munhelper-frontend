@@ -8,12 +8,12 @@ const Header = () => {
   return (
     <div className='header'>
       <div className="header__left">
-          <div className="header__left-logo">
-              <img src={logo} alt="MUNHelper Logo" />
-          </div>
-          <div className="header__left-title">
-              MUNHelper
-          </div>
+        <div className="header__left-logo">
+          <img src={logo} alt="MUNHelper Logo" />
+        </div>
+        <div className="header__left-title">
+          MUNHelper
+        </div>
       </div>
       <div className="header__right">
         <button className='header__right-button' onClick={() => {

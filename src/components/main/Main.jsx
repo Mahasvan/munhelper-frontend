@@ -7,11 +7,11 @@ import "./main.css"
 const Main = () => {
   return (
     <div className="main_container">
-        {Searchbox()}
-        <Response />
+      {Searchbox()}
+      <Response />
     </div>
 
-)
+  )
 }
 
 export default Main

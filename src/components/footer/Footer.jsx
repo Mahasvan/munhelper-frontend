@@ -7,19 +7,19 @@ import LinkedinLogo from "../../assets/linkedin.svg"
 import GithubLogo from "../../assets/github.svg"
 
 const Footer = () => {
-  return (
-    <div className='footer'>
+    return (
+        <div className='footer'>
 
-        <div className='footer__left'>
-            <div className='footer__made-with-love'>Made with 💖 by </div>
-            <div className='footer__name'>
-                <a href="https://github.com/Mahasvan/">Mahasvan</a>
+            <div className='footer__left'>
+                <div className='footer__made-with-love'>Made with 💖 by </div>
+                <div className='footer__name'>
+                    <a href="https://github.com/Mahasvan/">Mahasvan</a>
+                </div>
             </div>
-        </div>
-        
-        <div className='footer__right'>
-            <div className='footer__right-entry'>
-                <div className='footer__right-entry_title'>Socials!</div>
+
+            <div className='footer__right'>
+                <div className='footer__right-entry'>
+                    <div className='footer__right-entry_title'>Socials!</div>
                     <div className='footer__right-entry_links'>
                         <a href='https://instagram.com/mahasvan.exe'>
                             <img src={InstagramLogo} alt='Instagram'></img>
@@ -34,13 +34,13 @@ const Footer = () => {
                     <div className='footer__right-entry_title'>Portfolio</div>
                     <div className='footer__right-entry_links'>
                         <a href='https://github.com/Mahasvan/'>
-                            <img src={GithubLogo} alt='GitHub'/>
+                            <img src={GithubLogo} alt='GitHub' />
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-  )
+    )
 }
 
 export default Footer
