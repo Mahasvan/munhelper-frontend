@@ -4,6 +4,10 @@
   padding-bottom: 100px;
 }
 
+.content__no_llm {
+  flex-direction: column-reverse;
+}
+
 
 .content__left {
   flex: 0.2;
@@ -17,6 +21,12 @@
   padding: 20px;
   /* border: 1px solid green; */
 }
+
+.content__right-no_llm {
+  margin: 0 auto;
+  /* flex-grow: 1; */
+}
+
 
 @media screen and (max-width: 600px) {
   .content {
