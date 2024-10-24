@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client';
 import { ContextElementGroup } from '../context/Context'
 
-import Schema from "../../assets/schema.json"
+import Schema from "../../schema.json"
 
 import "./searchbox.css"
 

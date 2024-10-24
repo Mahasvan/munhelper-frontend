@@ -1,0 +1,4 @@
+{
+    "search_resos": "http://192.168.0.45:5001/search/ecosoc-resolutions?query=",
+    "chat_resos": "http://192.168.0.45:5001/chat/ecosoc-resolutions?query="
+}
