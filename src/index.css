@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  margin-bottom: var(--footer-size);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -22,4 +23,5 @@ code {
   --dark-blue: #3d52a0;
   --hover-grey: #444;
   --shadow: var(--light-grey) 0px 7px 29px 0px;
+  --footer-size: 100px;
 }

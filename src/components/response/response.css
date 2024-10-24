@@ -21,6 +21,11 @@
     height: 100%;
 }
 
+.response__container-no_llm {
+    display: none;
+}
+
+
 .response__logo {
     width: 40px;
     height: 40px;

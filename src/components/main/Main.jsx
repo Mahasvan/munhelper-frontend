@@ -6,9 +6,9 @@ import "./main.css"
 
 const Main = () => {
   return (
-    <div className="main_container">
-      {Searchbox()}
-      <Response />
+    <div className="main__container" id ='main__container'>
+        {Searchbox()}
+        <Response />
     </div>
 
   )

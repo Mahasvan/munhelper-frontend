@@ -19,7 +19,7 @@ const Header = () => {
         <button className='header__right-button' onClick={() => {
           window.open("https://github.com/Mahasvan/MunHelper", '_blank')
         }}>
-          Source Code
+          Source
         </button>
       </div>
     </div>
