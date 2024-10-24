@@ -52,7 +52,7 @@
     text-align: left;
     font-size: 15px;
     border: 2px dotted var(--light-blue)
-  }
+}
 
 .context__element-collapsible:hover {
     background-color: var(--darker-grey);
