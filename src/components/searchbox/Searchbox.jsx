@@ -9,7 +9,7 @@ import "./searchbox.css"
 
 const Searchbox = () => {
   const [query, setQuery] = useState("")
-  const [generate, setGenerate] = useState(false);
+  const [generate, setGenerate] = useState(true);
   function render_response(data, responseElementRoot) {
     responseElementRoot.render(data);
   }
@@ -72,7 +72,7 @@ const Searchbox = () => {
               <button type="submit">Search</button>
             </div>
             <div className='searchbox__form-bottom'>
-              <input type='checkbox' id='generateLLMSummary' name='generateLLMSummary' defaultChecked={true} onChange={(e) => {
+              <input type='checkbox' id='generateLLMSummary' name='generateLLMSummary' defaultChecked={generate} onChange={(e) => {
                 setGenerate(e.target.checked)
                 toggle_llm_visibility(e)}}/>
               <label htmlFor='generateLLMSummary'>Generate LLM Summary</label>
