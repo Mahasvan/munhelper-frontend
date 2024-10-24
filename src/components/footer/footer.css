@@ -2,17 +2,23 @@
     position: fixed;
     left: 0;
     bottom: 0;
+
     width: 100%;
-    min-height: fit-content;
+    height: var(--footer-size);
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
     border-top: 2px dotted var(--dark-blue);
     border-radius: 10px;
+    
     background-color: var(--almost-white);
     box-shadow: var(--shadow);
+    border: 1px solid red;
+    
+    /* margin-top:auto; */
 }
-
 
 
 .footer__left {
@@ -33,12 +39,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    .footer {
-        flex-direction: column;
+    /* .footer {
         position: static;
         padding-top: 20px;
         margin-top: 20px;
-    }
+    } */
+    
     .footer__right {
         justify-content: space-between;
     }
