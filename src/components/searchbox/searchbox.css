@@ -4,8 +4,13 @@
     justify-content: space-around;
 }
 
+.searchbox__form {
+    width: 100%;
+}
+
 .searchbox__form input {
-    min-width: 50vh;
+    max-width: 75%;
+    min-width: 50%;
     border: 2px dotted var(--darker-grey);
     box-shadow: var(--shadow);
     border-radius: 10px;
@@ -17,14 +22,8 @@
 
 .searchbox__form ::placeholder {
     color: var(--dark);
+    font-style: italic;
 }
-
-@media screen and (max-width: 768px) {
-    .searchbox__form input {
-        min-width: 30vh;
-    }
-}
-
 
 .searchbox__form-bottom {
     /* border: 1px solid red; */
