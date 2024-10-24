@@ -41,19 +41,44 @@ const Searchbox = () => {
         }
       }
     }
+
+    async function toggle_llm_visibility(e) {
+      console.log(e)
+      console.log(e.target.checked)
+      let responseContainerElement = document.getElementById('response__container')
+      let mainContainerElement = document.getElementById('main__container')
+      let contentContainerElement = document.getElementById('content')
+      let contentRightContainerElement = document.getElementById('content__right')
+
+      if (e.target.checked === true) {
+        responseContainerElement.classList.remove('response__container-no_llm')
+        mainContainerElement.classList.remove('main__container-no_llm')
+        contentContainerElement.classList.remove('content__no_llm')
+        contentRightContainerElement.classList.remove('content__right-no_llm')
+      } else {
+        responseContainerElement.classList.add('response__container-no_llm')
+        mainContainerElement.classList.add('main__container-no_llm')
+        contentContainerElement.classList.add('content__no_llm')
+        contentRightContainerElement.classList.add('content__right-no_llm')
+      }
+    }
     
     return (
-    <div className='searchbox'>
+    <div className='searchbox__enclosure'>
+      <div className='searchbox'>
         <form className='searchbox__form' onSubmit={handle_query}>
             <div className='searchbox__form-top'>
               <input type="text" placeholder="Search" name="query" onChange={(e) => setQuery(e.target.value)}/>
               <button type="submit">Search</button>
             </div>
             <div className='searchbox__form-bottom'>
-              <input type='checkbox' id='generateLLMSummary' name='generateLLMSummary' value={true} onChange={(e) => setGenerate(e.target.value)}/>
+              <input type='checkbox' id='generateLLMSummary' name='generateLLMSummary' defaultChecked={true} onChange={(e) => {
+                setGenerate(e)
+                toggle_llm_visibility(e)}}/>
               <label htmlFor='generateLLMSummary'>Generate LLM Summary</label>
             </div>
         </form>
+      </div>
     </div>
   )
 }
