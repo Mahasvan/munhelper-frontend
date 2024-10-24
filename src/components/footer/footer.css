@@ -15,7 +15,7 @@
     
     background-color: var(--almost-white);
     box-shadow: var(--shadow);
-    border: 1px solid red;
+    /* border: 1px solid red; */
     
     /* margin-top:auto; */
 }
@@ -48,6 +48,18 @@
     .footer__right {
         justify-content: space-between;
     }
+}
+
+@media screen and (max-height: 500px) {
+    .footer {
+        position: static;
+        /* padding-top: 20px; */
+        /* margin-top: 20px; */
+    }
+    body {
+        margin-bottom: 0;
+    }   
+
 }
 
 .footer__right-entry {

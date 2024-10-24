@@ -73,7 +73,7 @@ const Searchbox = () => {
             </div>
             <div className='searchbox__form-bottom'>
               <input type='checkbox' id='generateLLMSummary' name='generateLLMSummary' defaultChecked={true} onChange={(e) => {
-                setGenerate(e)
+                setGenerate(e.target.checked)
                 toggle_llm_visibility(e)}}/>
               <label htmlFor='generateLLMSummary'>Generate LLM Summary</label>
             </div>
