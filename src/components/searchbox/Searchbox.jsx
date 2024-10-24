@@ -68,7 +68,7 @@ const Searchbox = () => {
       <div className='searchbox'>
         <form className='searchbox__form' onSubmit={handle_query}>
             <div className='searchbox__form-top'>
-              <input type="text" placeholder="Search" name="query" onChange={(e) => setQuery(e.target.value)}/>
+              <input type="text" placeholder="Enter a query..." name="query" onChange={(e) => setQuery(e.target.value)}/>
               <button type="submit">Search</button>
             </div>
             <div className='searchbox__form-bottom'>
