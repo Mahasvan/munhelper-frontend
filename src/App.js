@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="App">
       <Header logo/>
-      <div className='content'>
+      <div className='content' id='content'>
         <div className='content__left'>
           <Sidebar />
         </div>
-        <div className='content__right'>
+        <div className='content__right' id='content__right'>
           <Main />
         </div>
       </div>
