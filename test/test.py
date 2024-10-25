@@ -26,8 +26,8 @@ res = "Hello World, I am Mahasvan".split()
 async def stream_res():
     return StreamingResponse(stream())
 
-@app.get("/search")
-def search():
+@app.get("/search/ecosoc-resolutions")
+def search(query: str):
     return [
     {
       "symbol": "2005/51",
@@ -47,4 +47,4 @@ def search():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=5001)

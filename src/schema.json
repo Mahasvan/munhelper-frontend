@@ -1,4 +1,0 @@
-{
-    "search_resos": "http://localhost:5001/search/ecosoc-resolutions?query=",
-    "chat_resos": "http://localhost:5001/chat/ecosoc-resolutions?query="
-}

@@ -4,17 +4,17 @@ This repository contains the Frontend code for [MunHelper](https://github.com/ma
 
 ## Prerequisites
 - Make sure Node is installed
-- If running separate from the MUNHelper set of Docker containers, ensure the correct parameters are filled in `src/schema.json`
+- You need to have an instance of MUNHelper running. 
+- Create a `.env` file at the project root with the following parameters. (Change the URLs according to your configuration)
     ```json
-    {
-        "search_resos": "http://localhost:5000/search/ecosoc-resolutions?query=",
-        "chat_resos": "http://localhost:500/chat/ecosoc-resolutions?query="
-    }
+    PORT=3000
+    REACT_APP_SEARCH_RESOS_URL="http://localhost:5001/search/ecosoc-resolutions?query="
+    REACT_APP_CHAT_RESOS_URL="http://localhost:5001/chat/ecosoc-resolutions?query="
     ```
 
 ## Build Instructions - Docker (Recommended)
 - To build MUNHelper, follow the instructions in [this repo](https://github.com/mahasvan/munhelper).
-- Configure backend access parameters in `src/schema.json`
+- Configure the .env file as previously described.
 - Once configured, build and run the frontend container like so.
 
 ```shell
@@ -37,7 +37,7 @@ docker run -p 3000:3000 --name MunHelperFrontend mahasvan/munhelper-frontend:lat
 > Use this method only if you have to. It is recommended to use Docker to host the app.
 
 - To build MUNHelper, follow the instructions in 
-- Configure backend access parameters in `src/schema.json` - Refer [the MUNHelper repository](https://github.com/mahasvan/munhelper).
+- Configure backend access parameters in the `.env` file - Refer [the MUNHelper repository](https://github.com/mahasvan/munhelper).
 - Once configured, run the below command to build the frontend.
 
 ```shell
@@ -62,6 +62,7 @@ Change `3000` to the port you wish for it to listen at.
     ```shell
     git clone https://github.com/Mahasvan/munhelper-frontend
     cd munhelper-frontend
+    # Configure the `.env` file
     npm i
     npm start
     ```

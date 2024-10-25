@@ -2,9 +2,21 @@ import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client';
 import { ContextElementGroup } from '../context/Context'
 
-import Schema from "../../schema.json"
-
 import "./searchbox.css"
+
+
+// Load environment variables
+// MUNHELPER_SEARCH_RESOS_URL
+// MUNHELPER_CHAT_RESOS_URL
+const searchResosURL = process.env.REACT_APP_SEARCH_RESOS_URL
+const chatResosURL = process.env.REACT_APP_CHAT_RESOS_URL
+
+if (!searchResosURL) {
+  searchResosURL = "http://localhost:5000/search/ecosoc-resolutions?query="
+}
+if (!chatResosURL) {
+  chatResosURL = "http://localhost:5000/chat/ecosoc-resolutions?query="
+}
 
 
 const Searchbox = () => {
@@ -17,7 +29,7 @@ const Searchbox = () => {
   async function handle_query(e) {
     e.preventDefault();
 
-    const response = await fetch(`${Schema["search_resos"]}${query}`).then(response => response.json());
+    const response = await fetch(`${searchResosURL}${query}`).then(response => response.json());
     const response_box = document.getElementById("context__container");
 
     const root = createRoot(response_box);
@@ -28,7 +40,7 @@ const Searchbox = () => {
       const generate_root = createRoot(generated_box)
       generate_root.render("Waiting for response...")
 
-      const response = await fetch(`${Schema["chat_resos"]}${query}`)
+      const response = await fetch(`${chatResosURL}${query}`)
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let text = ''
