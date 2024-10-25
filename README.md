@@ -2,6 +2,16 @@
 This repository contains the Frontend code for [MunHelper](https://github.com/mahasvan/munhelper).
 
 
+## Prerequisites
+- Make sure Node is installed
+- If running separate from the MUNHelper set of Docker containers, ensure the correct parameters are filled in `src/schema.json`
+    ```json
+    {
+        "search_resos": "http://localhost:5000/search/ecosoc-resolutions?query=",
+        "chat_resos": "http://localhost:500/chat/ecosoc-resolutions?query="
+    }
+    ```
+
 ## Build Instructions - Docker (Recommended)
 - To build MUNHelper, follow the instructions in [this repo](https://github.com/mahasvan/munhelper).
 - Configure backend access parameters in `src/schema.json`
@@ -10,8 +20,7 @@ This repository contains the Frontend code for [MunHelper](https://github.com/ma
 ```shell
 docker build -t mahasvan/munhelper-frontend:latest .
 ```
-## Deploying the app
-
+To run the built container:
 ```shell
 docker run -p 3000:3000 --name MunHelperFrontend mahasvan/munhelper-frontend:latest
 ```
@@ -25,10 +34,10 @@ docker run -p 3000:3000 --name MunHelperFrontend mahasvan/munhelper-frontend:lat
 ## Build Instructions - Bare Metal
 
 > [!WARNING]  
-> Use this method only if you have to. It is recommended to use Docker to host 
+> Use this method only if you have to. It is recommended to use Docker to host the app.
 
-- To build MUNHelper, follow the instructions in [this repo](https://github.com/mahasvan/munhelper).
-- Configure backend access parameters in `src/schema.json`
+- To build MUNHelper, follow the instructions in 
+- Configure backend access parameters in `src/schema.json` - Refer [the MUNHelper repository](https://github.com/mahasvan/munhelper).
 - Once configured, run the below command to build the frontend.
 
 ```shell
@@ -39,7 +48,7 @@ npm run build
 This command builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Deploying the app
+### Deploying the app
 
 ```shell
 npm install -g serve
@@ -47,7 +56,7 @@ serve -s build -l 3000
 ```
 Change `3000` to the port you wish for it to listen at.
 
-## Development
+## Building for Development
 - Make sure you have Node installed.
 - Use the following commands to make code changes and test without containerization.
     ```shell
@@ -57,3 +66,4 @@ Change `3000` to the port you wish for it to listen at.
     npm start
     ```
 - The app is now listening at [`http://localhost:3000`](http://localhost:3000)
+- To change the port that the app listens on, change the `PORT` variable in the `.env` file at the project root directory.
