@@ -8,8 +8,8 @@ import "./searchbox.css"
 // Load environment variables
 // MUNHELPER_SEARCH_RESOS_URL
 // MUNHELPER_CHAT_RESOS_URL
-const searchResosURL = process.env.REACT_APP_SEARCH_RESOS_URL
-const chatResosURL = process.env.REACT_APP_CHAT_RESOS_URL
+var searchResosURL = process.env.REACT_APP_SEARCH_RESOS_URL
+var chatResosURL = process.env.REACT_APP_CHAT_RESOS_URL
 
 if (!searchResosURL) {
   searchResosURL = "http://localhost:5000/search/ecosoc-resolutions?query="
