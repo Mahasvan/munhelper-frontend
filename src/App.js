@@ -1,23 +1,17 @@
-import './App.css';
 
 
 import Header from './components/header/Header';
-import Sidebar from './components/sidebar/Sidebar';
-import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
+
+
+import { Outlet } from 'react-router';
+
 
 function App() {
   return (
     <div className="App">
       <Header logo/>
-      <div className='content' id='content'>
-        <div className='content__left'>
-          <Sidebar />
-        </div>
-        <div className='content__right' id='content__right'>
-          <Main />
-        </div>
-      </div>
+      <Outlet />
       <Footer />
     </div>
   );

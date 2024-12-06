@@ -12,7 +12,7 @@ This repository contains the Frontend code for [MunHelper](https://github.com/ma
     REACT_APP_CHAT_RESOS_URL="http://localhost:5001/chat/ecosoc-resolutions?query="
     ```
 
-## Build Instructions - Docker (Recommended)
+## Build Instructions - Docker
 - To build MUNHelper, follow the instructions in [this repo](https://github.com/mahasvan/munhelper).
 - Configure the .env file as previously described.
 - Once configured, build and run the frontend container like so.

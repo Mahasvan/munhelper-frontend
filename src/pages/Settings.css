@@ -1,0 +1,27 @@
+.settings__container {
+    padding-bottom: var(--footer-size);
+}
+
+.settings__container {
+    margin: 10%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: start; */
+    background-color: var(--almost-white);
+
+}
+
+.settings__container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.settings__container td {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid red;
+}
