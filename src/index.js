@@ -19,6 +19,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Default />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>

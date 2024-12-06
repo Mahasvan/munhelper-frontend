@@ -32,8 +32,15 @@
     width: 100%;
 }
 
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
 .header__right-button {
     padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     border: 2px dotted var(--darker-grey);
     border-radius: 10px;
     font-weight: 700;
@@ -42,7 +49,31 @@
     background-color: var(--light-grey);
 }
 
+.header__right-settings {
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px dotted var(--darker-grey);
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    background-color: var(--light-grey);
+    display: flex;
+    align-items: center;
+}
+
+.header__right-settings img {
+    width: 20px;
+    height: 20px;
+}
+
 .header__right-button:hover {
+    background-color: var(--darker-grey);
+    border: 2px dotted var(--light-grey);
+}
+
+.header__right-settings:hover {
     background-color: var(--darker-grey);
     border: 2px dotted var(--light-grey);
 }
