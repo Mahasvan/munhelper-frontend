@@ -23,16 +23,14 @@ docker run -p 3000:3000 --name MunHelperFrontend mahasvan/munhelper-frontend:lat
 - Change the `-p 3000:3000` part of the command like so.
 - If you want the app to listen on port 8888, change it to `-p 8888:3000`
 - This maps port 3000 inside the container, to port 8888 in the host machine.
-- DO NOT change the `3000` after the `:`. 
+- **DO NOT** change the `3000` after the `:`. 
 
 ## Build Instructions - Bare Metal
 
 > [!WARNING]  
 > Use this method only if you have to. It is recommended to use Docker to host the app.
 
-- To build MUNHelper, follow the instructions in 
-- Configure backend access parameters in the `.env` file - Refer [the MUNHelper repository](https://github.com/mahasvan/munhelper).
-- Once configured, run the below command to build the frontend.
+- Run the below command to build the frontend.
 
 ```shell
 npm i
@@ -56,7 +54,6 @@ Change `3000` to the port you wish for it to listen at.
     ```shell
     git clone https://github.com/Mahasvan/munhelper-frontend
     cd munhelper-frontend
-    # Configure the `.env` file
     npm i
     npm start
     ```
