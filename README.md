@@ -4,13 +4,7 @@ This repository contains the Frontend code for [MunHelper](https://github.com/ma
 
 ## Prerequisites
 - Make sure Node is installed
-- You need to have an instance of MUNHelper running. 
-- Create a `.env` file at the project root with the following parameters. (Change the URLs according to your configuration)
-    ```env
-    PORT=3000
-    REACT_APP_SEARCH_RESOS_URL="http://localhost:5001/search/ecosoc-resolutions?query="
-    REACT_APP_CHAT_RESOS_URL="http://localhost:5001/chat/ecosoc-resolutions?query="
-    ```
+- You need to have an instance of MUNHelper running. You will need to configure the Backend Host and Port on the website settings.
 
 ## Build Instructions - Docker
 - To build MUNHelper, follow the instructions in [this repo](https://github.com/mahasvan/munhelper).

@@ -14,7 +14,7 @@ const handleSubmit = (e, host, port, setCookie) => {
 
 const SettingsTable = () => {
   // todo: get the values from cookie
-  const [cookies, setCookie, removeCookie] = useCookies(['backendHost', 'backendPort'])
+  const [cookies, setCookie, ..._] = useCookies(['backendHost', 'backendPort'])
   const [backendHost, setBackendHost] = useState(cookies.backendHost || 'localhost')
   const [backendPort, setBackendPort] = useState(cookies.backendPort || 5000)
 

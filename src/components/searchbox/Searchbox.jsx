@@ -19,7 +19,7 @@ const chatResosEndpoint = "/chat/ecosoc-resolutions?query="
 const Searchbox = () => {
   const [query, setQuery] = useState("")
   const [generate, setGenerate] = useState(true);
-  const [cookies, setCookie, removeCookie] = useCookies(['backendHost', 'backendPort'])
+  const [cookies, ..._] = useCookies(['backendHost', 'backendPort'])
   const backendHost = cookies.backendHost || 'http://localhost'
   const backendPort = cookies.backendPort || 5000  
   const searchResosURL = `${backendHost}:${backendPort}${searchResosEndpoint}`
