@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client';
 import { ContextElementGroup } from '../context/Context'
+import { useCookies } from 'react-cookie';
 
 import "./searchbox.css"
 
@@ -11,17 +12,19 @@ import "./searchbox.css"
 var searchResosURL = process.env.REACT_APP_SEARCH_RESOS_URL
 var chatResosURL = process.env.REACT_APP_CHAT_RESOS_URL
 
-if (!searchResosURL) {
-  searchResosURL = "http://localhost:5000/search/ecosoc-resolutions?query="
-}
-if (!chatResosURL) {
-  chatResosURL = "http://localhost:5000/chat/ecosoc-resolutions?query="
-}
+const searchResosEndpoint = "/search/ecosoc-resolutions?query="
+const chatResosEndpoint = "/chat/ecosoc-resolutions?query="
 
 
 const Searchbox = () => {
   const [query, setQuery] = useState("")
   const [generate, setGenerate] = useState(true);
+  const [cookies, setCookie, removeCookie] = useCookies(['backendHost', 'backendPort'])
+  const backendHost = cookies.backendHost || 'http://localhost'
+  const backendPort = cookies.backendPort || 5000  
+  const searchResosURL = `${backendHost}:${backendPort}${searchResosEndpoint}`
+  const chatResosURL = `${backendHost}:${backendPort}${chatResosEndpoint}`
+
   function render_response(data, responseElementRoot) {
     responseElementRoot.render(data);
   }
