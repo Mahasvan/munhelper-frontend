@@ -86,7 +86,9 @@ const SettingsTable = () => {
             <tr>
               <td>Backend URL</td>
               <td className="settings__table-form__backend-url">
-                <a href={`${protocol}://${backendHost}:${backendPort}`}>
+                <a href="#" onClick={() => {
+                  window.open(`${protocol}://${backendHost}:${backendPort}`, '_blank')
+                }}>
                   {protocol}://{backendHost}:{backendPort}
                 </a>
               </td>
