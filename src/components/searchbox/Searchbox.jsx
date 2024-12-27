@@ -19,11 +19,12 @@ const chatResosEndpoint = "/chat/ecosoc-resolutions?query="
 const Searchbox = () => {
   const [query, setQuery] = useState("")
   const [generate, setGenerate] = useState(true);
-  const [cookies, ..._] = useCookies(['backendHost', 'backendPort'])
-  const backendHost = cookies.backendHost || 'http://localhost'
+  const [cookies, ..._] = useCookies(['backendProtocol', 'backendHost', 'backendPort'])
+  const backendProtocol = cookies.backendProtocol || 'http'
+  const backendHost = cookies.backendHost || 'localhost'
   const backendPort = cookies.backendPort || 5000  
-  const searchResosURL = `${backendHost}:${backendPort}${searchResosEndpoint}`
-  const chatResosURL = `${backendHost}:${backendPort}${chatResosEndpoint}`
+  const searchResosURL = `${backendProtocol}://${backendHost}:${backendPort}${searchResosEndpoint}`
+  const chatResosURL = `${backendProtocol}${backendHost}:${backendPort}${chatResosEndpoint}`
 
   function render_response(data, responseElementRoot) {
     responseElementRoot.render(data);
@@ -58,8 +59,6 @@ const Searchbox = () => {
   }
 
   async function toggle_llm_visibility(e) {
-    console.log(e)
-    console.log(e.target.checked)
     let responseContainerElement = document.getElementById('response__container')
     let mainContainerElement = document.getElementById('main__container')
     let contentContainerElement = document.getElementById('content')

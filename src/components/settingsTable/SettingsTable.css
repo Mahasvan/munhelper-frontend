@@ -49,3 +49,24 @@
 .settings__table-form td {
     padding: 10px;
 }
+
+.settings__table-form td {
+    font-weight: 500;
+}
+
+.settings__table-form input {
+    border: 2px dotted var(--darker-grey);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+.settings__table-form__protocol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
