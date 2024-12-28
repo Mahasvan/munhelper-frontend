@@ -12,8 +12,8 @@ import "./searchbox.css"
 var searchResosURL = process.env.REACT_APP_SEARCH_RESOS_URL
 var chatResosURL = process.env.REACT_APP_CHAT_RESOS_URL
 
-const searchResosEndpoint = "/search/ecosoc-resolutions?query="
-const chatResosEndpoint = "/chat/ecosoc-resolutions?query="
+const searchResosEndpoint = "/search/ecosoc-resolutions/?query="
+const chatResosEndpoint = "/chat/ecosoc-resolutions/?query="
 
 
 const Searchbox = () => {
@@ -24,7 +24,7 @@ const Searchbox = () => {
   const backendHost = cookies.backendHost || 'localhost'
   const backendPort = cookies.backendPort || 5000  
   const searchResosURL = `${backendProtocol}://${backendHost}:${backendPort}${searchResosEndpoint}`
-  const chatResosURL = `${backendProtocol}${backendHost}:${backendPort}${chatResosEndpoint}`
+  const chatResosURL = `${backendProtocol}://${backendHost}:${backendPort}${chatResosEndpoint}`
 
   function render_response(data, responseElementRoot) {
     responseElementRoot.render(data);
