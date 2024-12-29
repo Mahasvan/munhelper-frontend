@@ -9,9 +9,6 @@ import "./searchbox.css"
 // Load environment variables
 // MUNHELPER_SEARCH_RESOS_URL
 // MUNHELPER_CHAT_RESOS_URL
-var searchResosURL = process.env.REACT_APP_SEARCH_RESOS_URL
-var chatResosURL = process.env.REACT_APP_CHAT_RESOS_URL
-
 const searchResosEndpoint = "/search/ecosoc-resolutions/?query="
 const chatResosEndpoint = "/chat/ecosoc-resolutions/?query="
 
